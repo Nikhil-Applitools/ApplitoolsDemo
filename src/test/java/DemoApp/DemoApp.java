@@ -49,7 +49,7 @@ public class DemoApp {
         Configuration sconf = new Configuration();
         sconf.setIgnoreDisplacements(true);
         sconf.setIgnoreCaret(true);
-        //sconf.setMatchTimeout(10000);
+        sconf.setMatchTimeout(10000);
         sconf.setStitchMode(StitchMode.CSS);
         sconf.setMatchLevel(MatchLevel.STRICT);
         sconf.setWaitBeforeScreenshots(2000);
