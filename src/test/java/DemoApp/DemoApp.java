@@ -39,7 +39,11 @@ public class DemoApp {
     public static void setBatch() {
         // Must be before ALL tests (at Class-level)
         batch = new BatchInfo("Demo_App");
-        //batch.setId("Demo_App_Run");
+        String batchId = System.getenv("APPLITOOLS_BATCH_ID");
+        if(batchId != null) {
+            batch.setId(batchId);
+            System.out.println("Applitools Batch ID is " + batchId);
+        }
     }
 
     @Before
