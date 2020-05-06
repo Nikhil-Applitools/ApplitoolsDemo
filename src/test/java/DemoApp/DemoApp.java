@@ -101,7 +101,6 @@ public class DemoApp {
             // change it.
             eyes.open(driver, "Demo App", tName, new RectangleSize(1200, 800));
 
-
             //Check point
             printConsoleOutput(tName,eyes);
 
