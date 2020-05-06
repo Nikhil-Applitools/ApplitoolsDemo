@@ -79,7 +79,6 @@ public class DemoApp {
         // set configuration
         eyes.setConfiguration(sconf);
 
-
         // Use Chrome browser
         driver = new ChromeDriver();
         //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS) ;
