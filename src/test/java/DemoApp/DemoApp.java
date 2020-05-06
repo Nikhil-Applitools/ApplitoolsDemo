@@ -72,6 +72,10 @@ public class DemoApp {
         if(isNullOrEmpty(System.getenv("APPLITOOLS_API_KEY"))) {
             throw new RuntimeException("No API Key found; Please set environment variable 'APPLITOOLS_API_KEY'.");
         }
+        else
+        {
+            System.out.println("Applitools key is " + System.getenv("APPLITOOLS_API_KEY"));
+        }
 
         // Set your personal Applitols API Key from your environment variables.
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
