@@ -39,7 +39,11 @@ public class DemoApp {
     public static void setBatch() {
         // Must be before ALL tests (at Class-level)
         batch = new BatchInfo("Demo_App");
-        //batch.setId("Demo_App_Run");
+        String batchId = System.getenv("APPLITOOLS_BATCH_ID");
+        if(batchId != null) {
+            batch.setId(batchId);
+            System.out.println("Applitools Batch ID is " + batchId);
+        }
     }
 
     @Before
@@ -68,13 +72,16 @@ public class DemoApp {
         if(isNullOrEmpty(System.getenv("APPLITOOLS_API_KEY"))) {
             throw new RuntimeException("No API Key found; Please set environment variable 'APPLITOOLS_API_KEY'.");
         }
+        else
+        {
+            System.out.println("Applitools key is " + System.getenv("APPLITOOLS_API_KEY"));
+        }
 
         // Set your personal Applitols API Key from your environment variables.
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 
         // set configuration
         eyes.setConfiguration(sconf);
-
 
         // Use Chrome browser
         driver = new ChromeDriver();
@@ -93,7 +100,6 @@ public class DemoApp {
             // We have set it to 800 x 600 to accommodate various screens. Feel free to
             // change it.
             eyes.open(driver, "Demo App", tName, new RectangleSize(1200, 800));
-
 
             //Check point
             printConsoleOutput(tName,eyes);
