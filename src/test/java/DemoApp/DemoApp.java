@@ -137,7 +137,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_Diff_Test_Layout() throws Exception {
         try {
             var flag = false;
@@ -171,7 +171,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_CrossBrowser_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -221,7 +221,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_IgnoreRegion_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -260,7 +260,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_CheckRegion_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -296,7 +296,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_CheckFloatingRegion_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -330,7 +330,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_CheckStrictRegion_Test_Layout() throws Exception {
         try {
             var flag = false;
@@ -367,7 +367,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_CheckLayoutRegion_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -400,7 +400,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_CheckElement_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -431,7 +431,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_CompareBranch_Test_Strict () throws Exception
     {
         // to do
@@ -479,7 +479,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+//    @Test
     public void DemoApp_SlackIntegration_Test ()
     {
         try {
