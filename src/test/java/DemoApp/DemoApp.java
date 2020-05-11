@@ -489,8 +489,7 @@ public class DemoApp {
 
             //System.setProperty("webdriver.chrome.driver","/Users/Nikhil/Documents/chromedriver/v81/chromedriver.exe");
             // Set AUT's name, test name and viewport size (width X height)
-            // We have set it to 800 x 600 to accommodate various screens. Feel free to
-            // change it.
+            // We have set it to 800 x 600 to accommodate various screens. Feel free to change it.
             eyes.open(driver, "Demo App", tName, new RectangleSize(1200, 800));
 
             //Check point
