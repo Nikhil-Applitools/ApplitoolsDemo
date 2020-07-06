@@ -63,7 +63,6 @@ public class DemoApp {
 
 
         // Initialize the eyes SDK
-
         eyes = new Eyes();
         eyes.setLogHandler(new FileLogger("/Users/nikhil/Documents/demos/Java/logs/DemoApp.log",true,true));
 
