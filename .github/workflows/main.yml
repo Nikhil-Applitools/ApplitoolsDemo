@@ -13,17 +13,15 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Log Git SHA
-        run: echo "$GITHUB_SHA"
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v1
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
         with:
-          node-version: '14.x'
-      - run: npm ci
-      - name: Run Tests
-        run: npm run cypress:ci
+          java-version: 11.0.4
+      - name: Maven Package
+        run: mvn -B clean package 
+      - name: Maven Verify
+        run: mvn -B clean test
     
   batch-completion-notification:
     needs: run-tests
