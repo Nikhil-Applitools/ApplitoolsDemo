@@ -20,8 +20,8 @@ jobs:
           java-version: 11.0.4
       - name: Install Google Chrome
         run: |
-          chmod +x ./src/test/java/demoapp/InstallChrome.sh
-            ./src/test/java/demoapp/InstallChrome.sh
+          chmod +x ./src/test/java/demoapp/Install.sh
+            ./src/test/java/demoapp/Install.sh
       - name: Maven Package
         run: mvn -B clean package 
       - name: Maven Verify
