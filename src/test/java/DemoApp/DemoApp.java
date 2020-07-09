@@ -65,7 +65,7 @@ public class DemoApp {
         // Initialize the eyes SDK
 
         eyes = new Eyes();
-        eyes.setLogHandler(new FileLogger("/Users/nikhil/Documents/demos/Java/logs/DemoApp.log",true,true));
+       // eyes.setLogHandler(new FileLogger("/Users/nikhil/Documents/demos/Java/logs/DemoApp.log",true,true));
 
 
         // Raise an error if no API Key has been found.
