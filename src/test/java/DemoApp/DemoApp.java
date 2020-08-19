@@ -1,6 +1,5 @@
 package DemoApp;
 
-
 import com.applitools.eyes.*;
 import com.applitools.eyes.selenium.ClassicRunner;
 import com.applitools.eyes.selenium.Configuration;
