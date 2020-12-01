@@ -4,7 +4,11 @@ on:
   pull_request:
     branches: 
       - '**'
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e4817e83ec1cf422fbafc5d7f1717e9088bd241c
 env:
     APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
     APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha }}
