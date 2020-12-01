@@ -65,7 +65,7 @@ public class DemoApp {
         // Initialize the eyes SDK
 
         eyes = new Eyes();
-        eyes.setLogHandler(new FileLogger("/Users/nikhil/Documents/demos/Java/logs/DemoApp.log",true,true));
+       // eyes.setLogHandler(new FileLogger("/Users/nikhil/Documents/demos/Java/logs/DemoApp.log",true,true));
 
 
         // Raise an error if no API Key has been found.
@@ -82,9 +82,19 @@ public class DemoApp {
 
         // set configuration
         eyes.setConfiguration(sconf);
+        
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+        options.addArguments("--start-maximized");
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-gpu"); // applicable to windows os only
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("--no-sandbox"); // Bypass OS security model
+         options.addArguments("--headless");
+
 
         // Use Chrome browser
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS) ;
     }
 
