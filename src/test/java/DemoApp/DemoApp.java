@@ -65,7 +65,7 @@ public class DemoApp {
         // Initialize the eyes SDK
 
         eyes = new Eyes();
-        eyes.setLogHandler(new FileLogger("/Users/nikhil/Documents/demos/Java/logs/DemoApp.log",true,true));
+       // eyes.setLogHandler(new FileLogger("/Users/nikhil/Documents/demos/Java/logs/DemoApp.log",true,true));
 
 
         // Raise an error if no API Key has been found.
@@ -82,9 +82,19 @@ public class DemoApp {
 
         // set configuration
         eyes.setConfiguration(sconf);
+        
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+        options.addArguments("--start-maximized");
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-gpu"); // applicable to windows os only
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("--no-sandbox"); // Bypass OS security model
+         options.addArguments("--headless");
+
 
         // Use Chrome browser
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS) ;
     }
 
@@ -171,7 +181,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_CrossBrowser_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -221,7 +231,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_IgnoreRegion_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -260,7 +270,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_CheckRegion_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -296,7 +306,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_CheckFloatingRegion_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -330,7 +340,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_CheckStrictRegion_Test_Layout() throws Exception {
         try {
             var flag = false;
@@ -367,7 +377,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_CheckLayoutRegion_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -400,7 +410,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_CheckElement_Test_Strict() throws Exception {
         try {
             var flag = false;
@@ -431,7 +441,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_CompareBranch_Test_Strict () throws Exception
     {
         // to do
@@ -479,7 +489,7 @@ public class DemoApp {
         }
     }
 
-    @Test
+    //@Test
     public void DemoApp_SlackIntegration_Test ()
     {
         try {
